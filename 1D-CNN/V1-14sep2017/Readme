@@ -1,0 +1,23 @@
+Version 1.0:
+
+Tried replacing 7X7 with two series 7X1 and 1X7 Convolutions and then Relu pooled.
+
+Didnt Work network Loss Didnt converge. Tried with various sets of Training Hyper Parameters.
+
+Reason: Network is not learning patterns in 1D Hence Loss was not converging.
+
+
+Version 1.1:
+Thought series convolution of 7X1 and 1X7 is not finding dimensional patterns properly hence I put 2 Parallel 48 7X1,1X7 and 1X7, 7X1
+
+Still Loss didn't Converge
+
+48sn contains architecture copyable in to train_val.prototxt and usable with caffe.
+
+Lesson Learnt: Network Learns only if it is Learns.
+
+Then Moved to Version 2.0.
+
+
+
+

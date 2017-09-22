@@ -1,0 +1,15 @@
+Version 2.0:
+Implementting a 1D filter instead of 2D for CNN i.e Implementing a Network that can learn 1D Patterns and Identify for Image Classification.
+Replaced 7X7 with two parallel 7X1 and 1X7 Convolution and pooled in cross dimensional filter such that data can be concatanated.
+Worked!!!!!!!!!!!! loss Converging.
+
+****967117sn****	contains Arhcitecture copyable to train_val.prototxt and run in caffe.
+
+***Training Time is High and Just a modified version of Squeezenet. Hence scaling 1D filter in to Squeezemodules o Squeeze Inception Module.
+
+
+
+
+
+
+
