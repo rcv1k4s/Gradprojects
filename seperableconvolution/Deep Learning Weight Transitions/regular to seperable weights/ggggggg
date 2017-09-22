@@ -1,0 +1,6 @@
+clc;
+clear;
+fid = fopen('3.txt','r')
+tmp = textscan(fid,'%s','Delimiter',' ');
+fclose(fid);
+tmp{1}
