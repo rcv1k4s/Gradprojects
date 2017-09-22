@@ -1,0 +1,13 @@
+1. Download Dataset and extract.
+
+2. Give Paths to Train and Validation Dataset in Caffe/examples/imagenet/create_imagenet.sh and imagemean.sh. and run them and create .lmdb and .binaryprototxt.
+
+3. Give proper Path to train_val.prototxt in solver.prototxt and set proper hyper Parameters.
+
+4. ./build/tools/caffe train --solver=models/SqueezeNet-master/solver.prototxt 	- run this command give proper path to solver.prototxt
+
+5. resume training from snapshots- ./build/tools/caffe train --solver=models/SqueezeNet-master/solver.prototxt --snapshot=train_iter_1000.solverstate 
+	Snapshot are taken by caffe and parameter is set in solver.prototxt
+
+
+Use net scope editor to visualize network using train_val.prototxt usefult to analyze link : http://ethereon.github.io/netscope/#/editor

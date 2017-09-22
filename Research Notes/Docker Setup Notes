@@ -1,0 +1,16 @@
+Command to build the docker after you install NVIDIA-DOCKER:
+
+			nvidia-docker run -ti bvlc/caffe:gpu caffe --version
+
+Used a Docker to run the Caffe Training on Server and Imagenet folder mounted in to Docker using Below Command
+
+			docker run -v /home/LAB/rchamart/Downloads/ILSVRC2012/:/opt/caffe/data/imagenet/ -ti bvlc/caffe:gpu bash
+
+Command to Run it regularly :
+
+			docker run -ti bvlc/caffe:cpu bash
+
+
+Guide for Dockers:
+
+			https://docs.docker.com/v1.10/engine/userguide/containers/dockerizing/

@@ -1,0 +1,42 @@
+Backpropagation
+
+Change all weights like trying every possible weights which will reduce he cost function
+
+
+Instead of trying each possibility until we hit the wall we use calculus:
+
+
+1. Gradient Descent
+Give in a single Example
+Decide the direction of change using cost function Gradient
+
+2. Stochoistic Gradient Descent
+
+Using Multiple Inputs known and perform gradient descent which is favourable incase non convex cost functions
+
+error function is considered as squared and half to reduce computation after derivation
+
+Chain Rule
+
+Backpropagating error delta
+
+3. Batch Gradient Descent:
+
+Multiple Inputs pulling Descent in multiple way will be made to vote the most feasible gradient descent direction
+
+
+
+
+find the gradient 
+
+then we substract the gradient from weight
+
+
+
+
+
+                
+
+
+
+

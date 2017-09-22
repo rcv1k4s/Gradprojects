@@ -1,0 +1,70 @@
+Link to compute Accuracy : https://groups.google.com/forum/#!topic/caffe-users/_-QYWJmaVPs
+To compute accuracy of CNN Imagenet Inference in caffe.
+
+Link to Netscope CNN Analyzer: http://dgschwend.github.io/netscope/quickstart.html
+TO visualize layers and analyze layers of CNN using .prototxt file
+
+Link to Download Imagenet Image and Validation Data Set: Imagenet.org/downloads
+Training Data to Train CNN's
+
+Link to Learn How to Train CNN from Scratch: http://caffe.berkeleyvision.org/gathered/examples/imagenet.html
+
+Link to Tutorial of Caffe Installation: http://caffe.berkeleyvision.org/installation.html
+
+Explanation files:
+Layers/ has code for each layer
+
+Data/ has Image and validation Data Set
+
+Models/ Contain default models
+
+Each Model/ Contains 
+SqueezeNet_v1.0/train_val.prototxt          #model architecture
+SqueezeNet_v1.0/solver.prototxt             #additional training details (learning rate schedule, etc.)
+SqueezeNet_v1.0/squeezenet_v1.0.caffemodel  #pretrained model parameters
+
+
+Run Caffe Docker: nvidia-docker exec -it caffe-gpu bash
+
+
+
+Enabling Rectangular Filter Application: Make the following Changes:
+
+In function col2im_gpu_kernel (file - im2col.cu) -
+// int offset = (c * patch_h * patch_w + h * patch_h + w) * height_col * width_col;
+should be changed to
+int offset = (c * patch_h * patch_w + h * patch_w + w) * height_col * width_col;
+Explanation - let us assume for simplicity that c = 0 and stride_w = stride_h = 1; then to find where h,w is found in data_col for location hcol, wcol we need to do the following -
+data_col + hcol_width_out + wcol + ((h-hcol)_patch_w+(w-wcol))*height_out * width_out
+If we expand it and rearrange we will find that it should be patch_w instead of patch_h
+In function im2col_cpu (file im2col.cpp)
+// int w_offset = c % patch_h;
+// int h_offset = (c / patch_h) % patch_h;
+should be changed to
+int w_offset = c % patch_w;
+int h_offset = (c / patch_w) % patch_h;
+In function col2im_cpu (file im2col.cpp)
+// int w_offset = c % patch_h;
+// int h_offset = (c / patch_h) % patch_h;
+should be changed to
+int w_offset = c % patch_w;
+int h_offset = (c / patch_w) % patch_h;
+TestRectCPU (file - test_im2col_layer.cpp)
+// EXPECT_EQ(this->blob_top_->data_at(0, c, 0, 0),
+// this->blob_bottom_->data_at(0, (c / 15), (c / 5) % 5, c % 5));
+should be changed to
+EXPECT_EQ(this->blob_top_->data_at(0, c, 0, 0),
+this->blob_bottom_->data_at(0, (c / 15), (c / 3) % 5, c % 3));
+TestRectGPU (file test_im2col_layer.cpp)
+// EXPECT_EQ(this->blob_top_->data_at(0, c, 0, 0),
+// this->blob_bottom_->data_at(0, (c / 15), (c / 5) % 5, c % 5));
+should be changed to
+EXPECT_EQ(this->blob_top_->data_at(0, c, 0, 0),
+this->blob_bottom_->data_at(0, (c / 15), (c / 3) % 5, c % 3));
+Explanation for 2,3,4 and 5 is same, for w_offset mod with patch_w should be taken and the rest follows accordingly.
+
+
+
+
+
+
