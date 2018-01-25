@@ -1,0 +1,24 @@
+Ramachandra Vikas Chamarthi
+rchamart@uncc.edu
+Grad Research Assistant
+UNC Charlotte
+
+OpenCV function Profiling:
+--------------------------
+Profiling tool: callgrind and kcachegrind
+
+https://kcachegrind.github.io/html/Home.html
+
+
+How to use callgrind file for profiling:
+------------------------------------------
+
+sudo apt-get install sudo apt-get install -y kcachegrind valgrind
+ 
+gcc -flags *.c 					//Compile the .c file as you normally do
+
+valgrind --tool=callgrind ./Executable 		//Along with output a callgrind.out.<Random4digitnumber> is produced
+
+kcachegrind callgrind.out.<Random4digitnumber>	//OpenGUI click on call graph in the middle bottom for call graph
+
+
