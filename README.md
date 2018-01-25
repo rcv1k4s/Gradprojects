@@ -4,7 +4,7 @@ Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
 
 /2D Convolution Contains code developed for work loading purposes to test GPU's
 
-/Research Notes/ Contains wall i got hit while developing them 
+/Research Notes/ Contains notes of problems or errors I faced and solution for them 
 
 /Seperableconvolution/ Contains  transition of caffe weights in to seperable and gaussian
 
