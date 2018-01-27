@@ -1,0 +1,7 @@
+car.data and car.names are dataset and name in CSV format downloaded from : https://archive.ics.uci.edu/ml/machine-learning-databases/car/car.data
+
+first_Machine_Learning_program.py contains Reading IRIS Dataset and classification using LR, LDA, KNN, CART, NB, SVM
+
+carreg.py contains program to load csv files from local system using pandas read_csv 
+
+
