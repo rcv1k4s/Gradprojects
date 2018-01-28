@@ -1,0 +1,15 @@
+To build Imagenet TF records for training using imagenet dataset
+----------------------------------------------------------------
+processes images as labels in imagenet dataset as TF records usable as module to run in tensorflow by importing them
+
+place this script in place of models/research/slim/datasets folder and run it 
+\
+python build_imagenet_data.py
+-----------------------------
+
+give data_dir directory in which you have imagenet/train/ dataset labelled folders like n0722323
+
+
+
+
+
