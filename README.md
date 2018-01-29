@@ -1,4 +1,5 @@
 Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
+------------------------------------------------------------------------------
 
 /1D-CNN contains my imagenet convolution model modified from squeezenet to extract 1D feature maps instead of 2D feature maps
 
@@ -15,3 +16,8 @@ Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
 /tf-imagenet contains python script to make tensor flow imagebnet TF record for imagenet model Import 
 
 Note: Research I am about to publish is not posted in github, I will update once I have published.
+---------------------------------------------------------------------------------------------------
+----------------------------
+Ramachandra Vikas Chamarthi
+vikaschamarthi240@gmail.com
+----------------------------
