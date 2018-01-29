@@ -9,6 +9,22 @@ python build_imagenet_data.py
 
 give data_dir directory in which you have imagenet/train/ dataset labelled folders like n0722323
 
+Once you have the data in /tmp/ as TFrecords 
+
+you can import them using:
+
+filenames = ["/var/data/file1.tfrecord", "/var/data/file2.tfrecord"]
+dataset = tf.data.TFRecordDataset(filenames)
+
+once you import data in TFrecords you can toy with data with ease using tf.data functions!1
+
+-------------------------------------
+Ramachandra Vikas Chamarthi
+vikaschamarthi240@gmail.com
+---------------------------------------
+
+
+
 
 
 
