@@ -2,6 +2,8 @@
 --------------------------------
 
 Squeezenetv1.0/ contains solverstate snapshot at 170000 iterations and output log for training until 170000 iterations on Nvidia Tesla P100
+alexnetp100/ contains solverstate snapshot at 350000 iterations and output log for training until 350000 iterations on Nvidia Tesla P100
+
 Further Improvements of Network architecture are not posted in public as I am about to publish.
 
 
