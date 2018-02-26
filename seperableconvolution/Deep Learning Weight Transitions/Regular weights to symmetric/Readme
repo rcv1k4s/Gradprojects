@@ -1,0 +1,2 @@
+Run Python makesymmetric.py to convert weights from seperable.tct to produce outt.txt containing symmetric weights
+
