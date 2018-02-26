@@ -16,6 +16,3 @@ You can also run the other experiments from the paper below using example1.m, ex
 
 
 Reference: N. Gillis and Y. Shitov, Low-Rank Matrix Approximation in the Infinity Norm, 2017. 
-
-
-Please report any bug to nicolas.gillis@umons.ac.be. Thanks! 
