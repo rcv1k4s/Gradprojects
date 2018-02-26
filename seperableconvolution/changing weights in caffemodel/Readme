@@ -1,0 +1,1 @@
+run python exportconv1weightsfromcaffe.py to modify weights in .caffemodel file
