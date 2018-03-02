@@ -15,6 +15,9 @@ Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
 
 /tf-imagenet contains python script to make tensor flow imagenet TF record for imagenet model Import 
 
+/PyCachesimulator-FT Contains Python code to simulate Cache behaviour and print out way associativity of replacing addresses
+with Farthest Address replacement policy.
+
 Note: Research I am about to publish is not posted in github, I will update once I have published.
 
 ----------------------------
