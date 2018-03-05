@@ -11,7 +11,7 @@ Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
 
 /pseudo-maxwell/ contains psuedo maxwell architecture designed to behave near to Jetson TX1 for GPGPU-sim.
 
-/Research/Opencvfunction_calgrind contains opencv cpp samples callgrind profile outputs
+/Opencvfunction_calgrind contains opencv cpp samples callgrind profile outputs
 
 /tf-imagenet contains python script to make tensor flow imagenet TF record for imagenet model Import 
 
