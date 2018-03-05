@@ -17,6 +17,7 @@ Research under TECSAR group I am doing : https://coefs.uncc.edu/htabkhiv/
 
 /PyCachesimulator-FT Contains Python code to simulate Cache behaviour and print out way associativity of replacing addresses
 with Farthest Address replacement policy.
+/tensorflow-LSTM contains simple LSTM implemented in Tensorflow Skelton can be used as foothold to develop complex networks
 
 Note: Research I am about to publish is not posted in github, I will update once I have published.
 
