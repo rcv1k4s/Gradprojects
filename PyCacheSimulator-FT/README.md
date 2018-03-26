@@ -1,21 +1,17 @@
-# PyCacheSimulator
 
-A parameterizable cache simulator using Python
- 
-Code prints the output for each address replacement way 0-4 
+************************PyCache Simulator with Farthest in Future replacement policy***************************8
 
-Replacement Policy: Replace the Farthest
+Cache Block farthest in known trace is replaced in way number
 
-0 for Hit and nothing replaced
+Run : ./Cachesimulator trace.gz trace.gz 16 32 4  #16 16Kb Cache Size; 32B Block Size; 4 way Associativity
 
-1-4 for 0-3 ways in 4 way associativities
+LRU had 25% error rate for first 50k accesses, But FIF Farthest in Future has 15% error.
 
-Run Command:
+Can be run on Huge addresses with Psuedo Farthest in Future i.r to replace block according to LRU if No block is found in known future trace,
+But needs a little modification to accept file as .gz extension and read N address ahead in to buffer
 
-python CacheSimulator.py trace.din 16 32 4      # trace file Cache_Size Block_Size way_associativity
 
---------------------------------------------------------------------------------------------------
 Ramachandra Vikas Chamarthi
+Graduate Research Assistant
+The UNC Charlotte
 vikaschamarthi240@gmail.com
-Graduate Research Assistant 
-
