@@ -7,7 +7,7 @@ Run : ./Cachesimulator trace.gz trace.gz 16 32 4  #16 16Kb Cache Size; 32B Block
 
 LRU had 25% error rate for first 50k accesses, But FIF Farthest in Future has 15% error.
 
-Can be run on Huge addresses with Psuedo Farthest in Future i.r to replace block according to LRU if No block is found in known future trace,
+Can be run on Huge addresses with Psuedo Farthest in Future i.e to replace block according to LRU if No block is found in known future trace,
 But needs a little modification to accept file as .gz extension and read N address ahead in to buffer
 
 
