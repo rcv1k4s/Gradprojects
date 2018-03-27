@@ -1,0 +1,75 @@
+***************** Steps to Install Jetpack on Jetson Tx1 or TX2***************************88
+
+Download the latest jetpack from https://developer.nvidia.com/embedded/jetpack comes with CUDA-9.0/CUDNN-7/TensorRT-3.0 and also with Opencv
+
+Need to register with Email ID and Download 
+
+System Setup
+
+Connect a Host PC and ubuntu to same network
+Make sure you have Micro USB cable to flash Jetson Boards
+
+Make a directory to hold all the jetson files mkdir jetpack3.2
+
+Download .run file of Jetpack3.2 in to jetpack3.2 folder
+
+chmod +x filename.run;./filename.run
+
+Above Command to give permission to execute and run the installer
+
+Select board 
+
+proceed clicking next 
+
+Command terminal opens asking to put board in USB Flashing mode
+
+1. Unplug power source
+2. make sure to connect USB Micro to Jetson host Computer
+3. Plug in Power source
+   Press and release power button
+   press and hold recovery button and while pressing recovery Button press and release Reset button
+   lsusb in Host to verify Jetson being in Flashable mode look for USB port with Name NVIdia Corp
+   If not found re do above steps from unplug power source
+   If found press enter in terminal stated above
+ 
+ Patiently wait to get Jetson Flashed and installed IP of Jetson will be shown Incase you not having display
+  
+  ssh nvidia@ip
+  password: nvidia (default username and password)
+  
+  
+  
+ Cheers!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ ************************Installing tensorflow after flashing with Jetpack 3.2 *****************************
+ 
+ 
+sudo apt update
+sudo apt upgrade
+
+sudo apt install python-pip
+
+pip install -U numpy
+
+# upgrade pip if you want
+
+Download wheel file from 
+
+ https://github.com/openzeka/Tensorflow-for-Jetson-TX2/tree/master/Jetpack-3.2/1.6
+ 
+ pip install wheelfilename
+ 
+ Installs smoothely
+ 
+ 
+ ************************************************************************************************************
+ 
+ Ramachandra VIkas chamarthi
+ 
+ Graduate Research Assistant
+ 
+ The UNC Charlotte
+ 
+ vikaschamarthi240@gmail.com
+ 
+ ************************************************************************************************************
