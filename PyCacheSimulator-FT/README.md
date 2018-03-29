@@ -1,5 +1,5 @@
 
-************************PyCache Simulator with Farthest in Future replacement policy***************************8
+****************************PyCache Simulator with Farthest in Future replacement policy*********************************
 
 Cache Block farthest in known trace is replaced in way number
 
